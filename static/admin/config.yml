@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: Coder2012/simco-cms
 
 media_folder: static/assets
 public_folder: assets
@@ -14,4 +15,3 @@ collections:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: body, label: Body, widget: markdown }
-      
