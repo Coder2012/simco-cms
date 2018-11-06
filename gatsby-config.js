@@ -1,4 +1,7 @@
 module.exports = {
+    siteMetadata: {
+        title: `simco-cms`,
+    },
     plugins: [
         `gatsby-plugin-netlify-cms`,
         `gatsby-transformer-remark`,
