@@ -1,6 +1,6 @@
 ---
-path: /simco
+path: /project-one
 date: 2018-11-07T10:51:20.455Z
-title: Project one
+title: Project One
 ---
-# project is starting soon
+# This is project one

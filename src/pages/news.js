@@ -1,9 +1,10 @@
 import React from 'react';
+import Layout from '../components/Layout';
 
 const News = () => {
-    return ( <section>
+    return ( <Layout>
         <h2>News</h2>
-    </section> );
+    </Layout> );
 }
  
 export default News;

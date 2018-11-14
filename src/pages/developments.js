@@ -1,9 +1,10 @@
 import React from 'react';
+import Layout from '../components/Layout';
 
 const Developments = () => {
-    return ( <section>
+    return ( <Layout>
         <h2>Developments</h2>
-    </section> );
+    </Layout> );
 }
  
 export default Developments;

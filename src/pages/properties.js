@@ -1,9 +1,10 @@
 import React from 'react';
+import Layout from '../components/Layout';
 
 const Properties = () => {
-    return ( <section>
+    return ( <Layout>
         <h2>Properties</h2>
-    </section> );
+    </Layout> );
 }
  
 export default Properties;

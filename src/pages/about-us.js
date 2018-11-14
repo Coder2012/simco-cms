@@ -1,9 +1,10 @@
 import React from 'react';
+import Layout from '../components/Layout';
 
 const AboutUs = () => {
-    return ( <section>
+    return ( <Layout>
         <h2>About Us</h2>
-    </section> );
+    </Layout> );
 }
  
 export default AboutUs;
