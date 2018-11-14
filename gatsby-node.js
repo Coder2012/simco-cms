@@ -4,6 +4,7 @@ exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
   const projectTemplate = path.resolve(`src/templates/projectTemplate.js`)
+  const newsTemplate = path.resolve(`src/templates/newsTemplate.js`)
 
   return graphql(`
     {
@@ -14,7 +15,8 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             frontmatter {
-              path
+              path,
+              type
             }
           }
         }
@@ -26,9 +28,10 @@ exports.createPages = ({ actions, graphql }) => {
     }
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+      const template = node.frontmatter.type === 'project' ? projectTemplate : newsTemplate;
       createPage({
         path: node.frontmatter.path,
-        component: projectTemplate,
+        component: template,
         context: {}, // additional data can be passed via context
       })
     })
