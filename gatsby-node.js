@@ -16,7 +16,8 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             frontmatter {
               path,
-              type
+              type,
+              image
             }
           }
         }
@@ -29,6 +30,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const template = node.frontmatter.type === 'project' ? projectTemplate : newsTemplate;
+      console.log(node.frontmatter.image)
       createPage({
         path: node.frontmatter.path,
         component: template,

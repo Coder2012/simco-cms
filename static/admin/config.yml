@@ -14,6 +14,7 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: image, label: "Featured Image", widget: "image", default: undefined }
       - { name: type, label: Type, widget: select, options: [ "project", "news"] }
       - { name: body, label: Body, widget: markdown }
   - name: news
@@ -24,5 +25,6 @@ collections:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: image, label: "Featured Image", widget: "image", default: undefined }
       - { name: type, label: Type, widget: select, options: [ "project", "news"] }
       - { name: body, label: Body, widget: markdown }
