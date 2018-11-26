@@ -1,23 +1,49 @@
 module.exports = {
-    siteMetadata: {
-        title: `simco-cms`,
+  siteMetadata: {
+    title: `simco-cms`
+  },
+  plugins: [
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/static/assets`,
+        name: "assets"
+      }
     },
-    plugins: [
-        `gatsby-plugin-netlify-cms`,
-        `gatsby-transformer-remark`,
-        {
-            resolve: `gatsby-source-filesystem`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/projects`,
+        name: "projects"
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/news`,
+        name: "news"
+      }
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
             options: {
-                path: `${__dirname}/projects`,
-                name: "markdown-pages",
+              name: 'assets',
             },
-        },
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                path: `${__dirname}/news`,
-                name: "markdown-pages",
-            },
-        },
-    ],
-}
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-netlify-cms`
+  ]
+};

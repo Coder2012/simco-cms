@@ -1,4 +1,11 @@
 const path = require("path")
+const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+
+exports.onCreateNode = ({ node }) => {
+  fmImagesToRelative(node);
+  // if(node.frontmatter)
+    // console.log(node.frontmatter)
+};
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -15,9 +22,8 @@ exports.createPages = ({ actions, graphql }) => {
         edges {
           node {
             frontmatter {
-              path,
-              type,
-              image
+              path
+              type
             }
           }
         }
@@ -30,7 +36,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
       const template = node.frontmatter.type === 'project' ? projectTemplate : newsTemplate;
-      console.log(node.frontmatter.image)
+
       createPage({
         path: node.frontmatter.path,
         component: template,
