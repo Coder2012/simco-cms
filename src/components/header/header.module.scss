@@ -1,0 +1,17 @@
+.header {
+    &-nav {
+        background-color: #323232;
+        width: 90vw;
+        transform: translateX(-100%);
+        transition: 0.4s ease-in-out;
+
+        a {
+            color: white;
+            text-transform: uppercase;
+        }
+
+        &-open {
+            transform: translateX(0);
+        }
+    }
+}
