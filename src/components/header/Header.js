@@ -27,7 +27,7 @@ class Header extends React.Component {
         const open = (this.state.navOpen) ? Styles.headerNavOpen : ''
 
         return ( 
-            <section>
+            <section className="header">
                 <Masthead clickHandler={this.mastheadHandler}/>
                 <nav className={[open, Styles.headerNav].join(' ')}>
                     <ul>

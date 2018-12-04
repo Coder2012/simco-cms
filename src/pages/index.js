@@ -3,7 +3,9 @@ import React from "react"
 import { graphql } from "gatsby"
 import PostLink from "../components/postLink"
 import Layout from "../components/Layout"
-import MainStyles from './reset.module.css'
+
+// eslint-disable-next-line
+import MainStyles from '../reset.module.css' 
 
 const IndexPage = ({
   data: {
