@@ -5,7 +5,9 @@ import Layout from "../components/Layout";
 import Media from "../components/media/Media";
 
 import SettingsStyles from "../settings.module.scss";
-import LayoutStyles from "../layout.module.scss";
+
+// eslint-disable-next-line
+import '../reset.module.css'
 
 const Developments = ({
   data: {
