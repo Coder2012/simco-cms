@@ -5,7 +5,7 @@ import PostLink from "../components/postLink"
 import Layout from "../components/Layout"
 
 // eslint-disable-next-line
-import MainStyles from '../reset.module.css' 
+import '../reset.module.css' 
 
 const IndexPage = ({
   data: {
