@@ -6,6 +6,7 @@ import Layout from "../components/Layout"
 
 // eslint-disable-next-line
 import '../reset.module.css' 
+import LayoutStyles from '../layout.module.scss'
 
 const IndexPage = ({
   data: {
@@ -17,7 +18,7 @@ const IndexPage = ({
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
   return (
-    <Layout>
+    <Layout layoutType={LayoutStyles.layoutSpacer}>
       {Posts}
     </Layout>
   )

@@ -1,10 +1,11 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
+import React from "react"
+import { graphql, Link } from "gatsby"
 
-import Layout from "../components/Layout";
-import Media from "../components/media/Media";
+import Layout from "../components/Layout"
+import Media from "../components/media/Media"
 
-import SettingsStyles from "../settings.module.scss";
+import SettingsStyles from "../settings.module.scss"
+import StylesLayout from '../layout.module.scss'
 
 // eslint-disable-next-line
 import '../reset.module.css'
@@ -26,7 +27,7 @@ const Developments = ({
     ));
 
   return (
-    <Layout background={SettingsStyles.developmentsBg}>
+    <Layout layoutType={StylesLayout.layoutSpacer} background={SettingsStyles.developmentsBg}>
       <h2>Developments</h2>
       <p>Please see our most recent developments</p>
       {Projects}

@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 import { graphql } from 'gatsby'
 import PostLink from '../components/postLink'
-import Layout from '../components/Layout';
+import Layout from '../components/Layout'
+import LayoutStyles from '../layout.module.scss'
 
 const News = ({
     data: {
@@ -12,7 +13,7 @@ const Projects = edges
     .filter(edge => edge.node.frontmatter.type === 'news')
     .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
 
-    return ( <Layout>
+    return ( <Layout layoutType={LayoutStyles.layoutSpacer}>
         <h2>News</h2>
         {Projects}
     </Layout> );
