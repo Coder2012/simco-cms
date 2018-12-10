@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 import PostLink from '../components/postLink'
 import Layout from '../components/Layout'
 import LayoutStyles from '../layout.module.scss'
+import SettingsStyles from '../settings.module.scss'
+import NewsMedia from '../components/media/newsMedia'
 
 const News = ({
     data: {
@@ -11,9 +13,9 @@ const News = ({
 }) => {
 const Projects = edges
     .filter(edge => edge.node.frontmatter.type === 'news')
-    .map(edge => <PostLink key={edge.node.id} post={edge.node} />)
+    .map(edge => <NewsMedia key={edge.node.id} data={edge.node.frontmatter} />)
 
-    return ( <Layout layoutType={LayoutStyles.layoutSpacer}>
+    return ( <Layout background={SettingsStyles.developmentsBg} layoutType={LayoutStyles.layoutSpacer}>
         <h2>News</h2>
         {Projects}
     </Layout> );
@@ -33,6 +35,14 @@ export const pageQuery = graphql`
             path
             title
             type
+            summary
+            image {
+              childImageSharp {
+                fixed(width: 160, height: 160) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }
