@@ -1,7 +1,22 @@
 .masthead {
-    background-color: #0a0c30; 
+    background-color: #27272a; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     height: 60px;
+    padding: 0 30px;
     position: fixed;
     width: 100%;
     z-index: 10;
+
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        
+        h1 {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
 }

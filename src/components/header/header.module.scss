@@ -1,20 +1,28 @@
 .header {
-    &-nav {
-        background-color: #0a0c30;
-        position: absolute;
-        width: 90vw;
-        height: 100vh;
-        transform: translate(-100%, 60px);
-        transition: 0.4s ease-in-out;
-        z-index: 5;
+  &-nav {
+    background-color: #27272a;
+    position: absolute;
+    width: 90vw;
+    height: 100vh;
+    padding: 0 30px;
+    transform: translate(-100%, 60px);
+    transition: 0.4s ease-in-out;
+    z-index: 5;
 
-        a {
-            color: white;
-            text-transform: uppercase;
-        }
+    li {
+      border-bottom: 1px solid rgba(119, 136, 153, 0.2);
 
-        &-open {
-            transform: translate(0, 60px);
-        }
+      a {
+        color: white;
+        display: inline-block;
+        padding: 5px 0;
+        text-transform: uppercase;
+        text-decoration: none;
+      }
     }
+
+    &-open {
+      transform: translate(0, 60px);
+    }
+  }
 }

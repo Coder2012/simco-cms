@@ -1,8 +1,32 @@
 .footer {
-    background-color: darkslategray;
-    padding: 30px;
-    ul {
-        display: flex;
-        justify-content: space-between;
+  background-color: #3c3d41;
+  &-social {
+    padding: 20px 30px;
+    display: inline-flex;
+    justify-content: flex-end;
+
+    li {
+      flex-basis: 40px;
     }
+
+    a {
+      display: inline-block;
+      padding: 0 4px;
+    }
+  }
+
+  &-links {
+    background-color: #27272a;
+    display: flex;
+    padding: 10px 30px;
+
+    a {
+      color: #fff;
+      font-size: 10px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0 10px 0 0;
+    }
+  }
 }

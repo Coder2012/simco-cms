@@ -7,7 +7,7 @@ import FooterStyles from './footer.module.scss'
 const Footer = () => {
   return (
     <footer className={FooterStyles.footer}>
-      <ul>
+      <ul className={FooterStyles.footerSocial}>
         <li>
           <a href="http://" target="_blank" rel="noopener noreferrer">
             <img src={TwitterIcon} alt="twitter icon"/>
@@ -23,6 +23,10 @@ const Footer = () => {
             <img src={InstagramIcon} alt="instagram icon"/>
           </a>
         </li>
+      </ul>
+      <ul className={FooterStyles.footerLinks}>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+        <li><a href="http://" target="_blank" rel="noopener noreferrer">Disclaimer</a></li>
       </ul>
     </footer>
   );
