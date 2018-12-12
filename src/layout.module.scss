@@ -11,4 +11,27 @@
         flex-direction: column;
         min-height: 100vh;
     }
+
+    &-row {
+        // display: flex;
+        // flex-wrap: wrap;
+        margin: 30px;
+    }
+
+    &-item {
+        display: block;
+    }
+    
+    @media (min-width: 768px) {
+        &-row {
+            // display: flex;
+            // flex-wrap: wrap;
+        }
+        
+        &-item {
+            display: block;
+            margin: 30px;
+            max-width: 50%;
+        }
+    }
 }

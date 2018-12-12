@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
+import React from "react";
+import { graphql, Link } from "gatsby";
 
-import Layout from "../components/Layout"
-import Media from "../components/media/Media"
+import Layout from "../components/Layout";
+import Media from "../components/media/Media";
 
-import SettingsStyles from "../settings.module.scss"
-import StylesLayout from '../layout.module.scss'
+import SettingsStyles from "../settings.module.scss";
+import LayoutStyles from "../layout.module.scss";
 
 // eslint-disable-next-line
-import '../reset.module.css'
+import "../reset.module.css";
 
 const Developments = ({
   data: {
@@ -18,7 +18,11 @@ const Developments = ({
   const Projects = edges
     .filter(edge => edge.node.frontmatter.type === "project")
     .map(edge => (
-      <Link key={edge.node.id} to={edge.node.frontmatter.path}>
+      <Link
+        key={edge.node.id}
+        className={LayoutStyles.layoutItem}
+        to={edge.node.frontmatter.path}
+      >
         <Media
           image={edge.node.frontmatter.spotlight}
           title={edge.node.frontmatter.title}
@@ -27,9 +31,14 @@ const Developments = ({
     ));
 
   return (
-    <Layout layoutType={StylesLayout.layoutSpacer} background={SettingsStyles.developmentsBg}>
-      <h2>Developments</h2>
-      <p>Please see our most recent developments</p>
+    <Layout
+      layoutType={LayoutStyles.layoutSpacer}
+      background={SettingsStyles.developmentsBg}
+    >
+      <section className={LayoutStyles.layoutRow}>
+        <h2>Developments</h2>
+        <p>Please see our most recent developments</p>
+      </section>
       {Projects}
     </Layout>
   );
